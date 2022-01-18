@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>BaiTap</title>
+  </head>
+  <body class="container text-center">
+    <h2>BT1-Tuyen Sinh</h2>
+    <br />
+    <label for="diem1">Diem mon thu 1 </label>
+    <input type="number" id="diem1" style="width: 200px" />
+    <br />
+    <label for="diem2">Diem mon thu 2 </label>
+    <input type="number" id="diem2" style="width: 200px" />
+    <br />
+    <label for="diem3">Diem mon thu 3 </label>
+    <input type="number" id="diem3" style="width: 200px" />
+    <br />
+    <label for="diemchuan">Diem chuan </label>
+    <input type="number" id="diemchuan" style="width: 200px" />
+    <br />
+    <div class="form-group container" style="width: 300px">
+      <label>Chon doi tuong uu tien</label>
+      <select class="form-control" id="doituonguutien">
+        <option selected>chon doi tuong</option>
+        <option value="0">khong thuoc doi tuong uu tien</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+    <div class="form-group container" style="width: 300px">
+      <label>Chon khu vuc uu tien</label>
+      <select class="form-control" id="khuvucuutien">
+        <option selected>chon khu vuc</option>
+        <option value="x">khong thuoc khu vuc uu tien</option>
+        <option value="a">khu vuc A</option>
+        <option value="b">khu vuc B</option>
+        <option value="c">khu vuc C</option>
+      </select>
+    </div>
+    <br /><br />
+    <button type="button" class="btn btn-info" onclick="ketqua()">
+      kiem tra ket qua
+    </button>
+    <br />
+    <br />
+    <h4 id="result_bt1"></h4>
+    <br />
+    <br />
+    <br />
+    <h2>BT2-Tinh tien dien</h2>
+    <br />
+    <label for="tenDien">nhap ten </label>
+    <input type="text" id="tenDien" style="width: 400px" />
+    <br />
+    <label for="soKw">so kw tieu thu </label>
+    <input type="number" id="sokw" style="width: 200px" />
+    <br />
+    <br />
+    <button type="button" class="btn btn-info" onclick="tinhTienDien()">
+      so tien phai tra
+    </button>
+    <br />
+    <br />
+    <h4 id="result_bt2"></h4>
+    <br />
+    <br />
+    <br />
+    <h2>BT3-Tinh thue thu nhap ca nhan</h2>
+    <br />
+    <label for="tenThue">nhap ten </label>
+    <input type="text" id="tenThue" style="width: 400px" />
+    <br />
+    <label for="thuNhap">Tong thu nhap nam </label>
+    <input type="number" id="thuNhap" style="width: 200px" />
+    <br />
+    <label for="nguoiPhuThuoc">so nguoi phu thuoc </label>
+    <input type="number" id="nguoiPhuThuoc" style="width: 200px" />
+    <br />
+    <br />
+    <button type="button" class="btn btn-info" onclick="tinhThue()">
+      thue thu nhap ca nhan phai tra
+    </button>
+    <br />
+    <br />
+    <h4 id="result_bt3"></h4>
+    <br />
+    <br />
+
+    <h2>BT4-Tinh tien cap</h2>
+    <br />
+    <label for="maKhachHang">nhap ma khach hang </label>
+    <input type="text" id="maKhachHang" style="width: 400px" />
+    <br />
+    <div class="form-group container" style="width: 300px">
+      <label>Loai khach hang</label>
+      <select class="form-control" id="khachHang">
+        <option selected>chon khach hang</option>
+        <option value="nd">Nha Dan</option>
+        <option value="dn">Doanh Nghiep</option>
+      </select>
+    </div>
+    <label for="congKetNoi">So cong ket noi </label>
+    <input type="number" id="congKetNoi" style="width: 200px" value="1" />
+    <br />
+    <label for="kenhCaoCap">so kenh cao cap </label>
+    <input type="number" id="kenhCaoCap" style="width: 200px" />
+    <br />
+    <br />
+    <button type="button" class="btn btn-info" onclick="tinhCap()">
+      tinh tien cap
+    </button>
+    <br />
+    <br />
+    <h4 id="result_bt4"></h4>
+    <!-- <h4 id="xuatSoLe"></h4> -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./bt4h.js"></script>
+    <script src="./tiendien.js"></script>
+    <script src="./thuethunhap.js"></script>
+    <script src="./tiencap.js"></script>
+  </body>
+</html>
