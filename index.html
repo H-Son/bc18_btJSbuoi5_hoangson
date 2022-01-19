@@ -13,115 +13,149 @@
     <title>BaiTap</title>
   </head>
   <body class="container text-center">
-    <h2>BT1-Tuyen Sinh</h2>
+    <h2 class="bg-warning">BT1-TUYỂN SINH</h2>
     <br />
-    <label for="diem1">Diem mon thu 1 </label>
-    <input type="number" id="diem1" style="width: 200px" />
+    <label for="diem1">Nhập Điểm Môn 1 </label>
+    <input type="number" id="diem1" style="width: 200px" placeholder="1-10" />
     <br />
-    <label for="diem2">Diem mon thu 2 </label>
-    <input type="number" id="diem2" style="width: 200px" />
+
+    <label for="diem2">Nhập Điểm Môn 2 </label>
+    <input type="number" id="diem2" style="width: 200px" placeholder="1-10" />
     <br />
-    <label for="diem3">Diem mon thu 3 </label>
-    <input type="number" id="diem3" style="width: 200px" />
+    <label for="diem3">Nhập Điểm Môn 3 </label>
+    <input type="number" id="diem3" style="width: 200px" placeholder="1-10" />
     <br />
-    <label for="diemchuan">Diem chuan </label>
-    <input type="number" id="diemchuan" style="width: 200px" />
+    <label for="diemchuan">Điểm Chuẩn </label>
+    <input
+      type="number"
+      id="diemchuan"
+      style="width: 200px"
+      placeholder="1-30"
+    />
     <br />
     <div class="form-group container" style="width: 300px">
-      <label>Chon doi tuong uu tien</label>
+      <label>Chọn Đối Tượng Ưu Tiên</label>
       <select class="form-control" id="doituonguutien">
-        <option selected>chon doi tuong</option>
-        <option value="0">khong thuoc doi tuong uu tien</option>
+        <option selected>Hãy Chọn Một Đối Tượng</option>
+        <option value="0">Không Thuộc Đối Tượng Ưu Tiên</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
       </select>
     </div>
     <div class="form-group container" style="width: 300px">
-      <label>Chon khu vuc uu tien</label>
+      <label>Chọn Khu Vực Ưu Tiên</label>
       <select class="form-control" id="khuvucuutien">
-        <option selected>chon khu vuc</option>
-        <option value="x">khong thuoc khu vuc uu tien</option>
-        <option value="a">khu vuc A</option>
-        <option value="b">khu vuc B</option>
-        <option value="c">khu vuc C</option>
+        <option selected>Hãy Chọn Một Khu Vực</option>
+        <option value="x">Không Thuộc Khu Vực Ưu Tiên</option>
+        <option value="a">Khu Vực A</option>
+        <option value="b">Khu Vực B</option>
+        <option value="c">Khu Vực C</option>
       </select>
     </div>
-    <br /><br />
+    <br />
     <button type="button" class="btn btn-info" onclick="ketqua()">
-      kiem tra ket qua
+      Kiểm Tra Kết Quả
     </button>
     <br />
     <br />
-    <h4 id="result_bt1"></h4>
+    <div class="bg-danger container" style="width: 300px">
+      <h4 id="result_bt1"></h4>
+    </div>
     <br />
     <br />
     <br />
-    <h2>BT2-Tinh tien dien</h2>
+    <h2 class="bg-warning">BT2-TÍNH TIỀN ĐIỆN</h2>
     <br />
-    <label for="tenDien">nhap ten </label>
-    <input type="text" id="tenDien" style="width: 400px" />
+    <label for="tenDien">Nhập Họ Và Tên Khách Hàng </label>
+    <input
+      type="text"
+      id="tenDien"
+      style="width: 400px"
+      placeholder="Họ & Tên"
+    />
     <br />
-    <label for="soKw">so kw tieu thu </label>
-    <input type="number" id="sokw" style="width: 200px" />
+    <label for="soKw">Điện Năng Tiêu Thụ </label>
+    <input type="number" id="sokw" style="width: 200px" placeholder="KWh" />
     <br />
     <br />
     <button type="button" class="btn btn-info" onclick="tinhTienDien()">
-      so tien phai tra
+      Tiền Điện Phải Trả
     </button>
     <br />
     <br />
-    <h4 id="result_bt2"></h4>
+    <div class="bg-danger container" style="width: 400px">
+      <h4 id="result_bt2"></h4>
+    </div>
     <br />
     <br />
     <br />
-    <h2>BT3-Tinh thue thu nhap ca nhan</h2>
+    <h2 class="bg-warning">BT3-TÍNH THUẾ THU NHẬP CÁ NHÂN</h2>
     <br />
-    <label for="tenThue">nhap ten </label>
-    <input type="text" id="tenThue" style="width: 400px" />
+    <label for="tenThue">Nhập tên cá nhân </label>
+    <input
+      type="text"
+      id="tenThue"
+      style="width: 400px"
+      placeholder="Họ & Tên"
+    />
     <br />
-    <label for="thuNhap">Tong thu nhap nam </label>
-    <input type="number" id="thuNhap" style="width: 200px" />
+    <label for="thuNhap">Tổng thu nhập hằng năm </label>
+    <input
+      type="number"
+      id="thuNhap"
+      style="width: 200px"
+      placeholder="VNĐ/Năm"
+    />
     <br />
-    <label for="nguoiPhuThuoc">so nguoi phu thuoc </label>
+    <label for="nguoiPhuThuoc">Số Người Phụ thuộc </label>
     <input type="number" id="nguoiPhuThuoc" style="width: 200px" />
     <br />
     <br />
     <button type="button" class="btn btn-info" onclick="tinhThue()">
-      thue thu nhap ca nhan phai tra
+      Tổng Thuế
     </button>
     <br />
     <br />
-    <h4 id="result_bt3"></h4>
+    <div class="bg-danger container" style="width: 400px">
+      <h4 id="result_bt3"></h4>
+    </div>
     <br />
     <br />
 
-    <h2>BT4-Tinh tien cap</h2>
+    <h2 class="bg-warning">BT4-TÍNH TIỀN CÁP</h2>
     <br />
-    <label for="maKhachHang">nhap ma khach hang </label>
-    <input type="text" id="maKhachHang" style="width: 400px" />
+    <label for="maKhachHang">Nhập Mã Khách Hàng </label>
+    <input
+      type="text"
+      id="maKhachHang"
+      style="width: 200px"
+      placeholder="123-456-789"
+    />
     <br />
     <div class="form-group container" style="width: 300px">
-      <label>Loai khach hang</label>
+      <label>Bạn Là :</label>
       <select class="form-control" id="khachHang">
-        <option selected>chon khach hang</option>
-        <option value="nd">Nha Dan</option>
-        <option value="dn">Doanh Nghiep</option>
+        <option selected>Hãy chọn loại dịch vụ</option>
+        <option value="nd">Nhà Dân</option>
+        <option value="dn">Doanh Nghiệp</option>
       </select>
     </div>
-    <label for="congKetNoi">So cong ket noi </label>
+    <label for="congKetNoi">Số Cổng Kết Nối </label>
     <input type="number" id="congKetNoi" style="width: 200px" value="1" />
     <br />
-    <label for="kenhCaoCap">so kenh cao cap </label>
+    <label for="kenhCaoCap">Tổng Số Kênh Cao Cấp Cần Thuê </label>
     <input type="number" id="kenhCaoCap" style="width: 200px" />
     <br />
     <br />
     <button type="button" class="btn btn-info" onclick="tinhCap()">
-      tinh tien cap
+      Tính Tiền Cáp
     </button>
     <br />
     <br />
-    <h4 id="result_bt4"></h4>
+    <div class="bg-danger container" style="width: 400px">
+      <h4 id="result_bt4"></h4>
+    </div>
     <!-- <h4 id="xuatSoLe"></h4> -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

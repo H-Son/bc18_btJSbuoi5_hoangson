@@ -70,12 +70,12 @@ function ketqua() {
   var tongdiem = diem3mon + khuvucValue + doituongValue;
   if (diem1Value * diem2Value * diem3Value != 0) {
     if (tongdiem > diemchuanValue) {
-      document.getElementById("result_bt1").innerText = "ban da dau";
+      document.getElementById("result_bt1").innerText = "Bạn Đã Thi Đậu";
     } else {
-      document.getElementById("result_bt1").innerText = "ban da rot'";
+      document.getElementById("result_bt1").innerText = "Bạn Thi Chưa Đậu";
     }
   } else {
-    document.getElementById("result_bt1").innerText = "ban da rot'";
+    document.getElementById("result_bt1").innerText = "Bạn Thi Chưa Đậu";
   }
   console.log({ diem3mon, tongdiem, doituongValue, khuvucValue });
 }

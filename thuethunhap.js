@@ -22,5 +22,5 @@ function tinhThue() {
     thuethunhap = (thuNhapChiuThue * 35) / 100;
   }
   document.getElementById("result_bt3").innerText =
-    "so tien " + thuethunhap.toLocaleString();
+    "Tổng Tiền Thuế Là " + thuethunhap.toLocaleString() + " VNĐ";
 }

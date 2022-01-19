@@ -44,5 +44,5 @@ function tinhCap() {
   var tienTKCC = thueKenhCaoCap(khachHangValue) * kenhCaoCapValue;
   var tongTienCap = tienXLHD + tienPDVCB + tienTKCC;
   document.getElementById("result_bt4").innerText =
-    "so tien " + tongTienCap.toLocaleString();
+    "Tổng Tiền Cáp Là " + tongTienCap.toLocaleString() + "$";
 }

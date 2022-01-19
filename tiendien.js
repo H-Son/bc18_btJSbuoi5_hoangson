@@ -14,5 +14,5 @@ function tinhTienDien() {
       50 * 500 + 50 * 650 + 100 * 850 + 150 * 1100 + (soKwValue - 350) * 1300;
   }
   document.getElementById("result_bt2").innerText =
-    "so tien " + tongtien.toLocaleString();
+    "Tiền Điện Là: " + tongtien.toLocaleString() + " VNĐ";
 }
